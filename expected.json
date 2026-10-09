@@ -1,0 +1,735 @@
+[
+ {
+  "card": "batterPlan",
+  "args": [
+   2,
+   "waffle"
+  ],
+  "expect": {
+   "eggs": 1,
+   "flour_g": 120,
+   "liquid_g": 190,
+   "butter_g": 30,
+   "batter_g": 390,
+   "drift_pct": 0.0,
+   "verdict": "a quiet breakfast"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   6,
+   "waffle"
+  ],
+  "expect": {
+   "eggs": 3,
+   "flour_g": 360,
+   "liquid_g": 570,
+   "butter_g": 90,
+   "batter_g": 1170,
+   "drift_pct": 0.0,
+   "verdict": "a family brunch"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   12,
+   "waffle"
+  ],
+  "expect": {
+   "eggs": 6,
+   "flour_g": 720,
+   "liquid_g": 1140,
+   "butter_g": 180,
+   "batter_g": 2340,
+   "drift_pct": 0.0,
+   "verdict": "a full brunch shift"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   48,
+   "waffle"
+  ],
+  "expect": {
+   "eggs": 24,
+   "flour_g": 2880,
+   "liquid_g": 4560,
+   "butter_g": 720,
+   "batter_g": 9360,
+   "drift_pct": 0.0,
+   "verdict": "a full brunch shift"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   3,
+   "waffle"
+  ],
+  "expect": {
+   "eggs": 2,
+   "flour_g": 240,
+   "liquid_g": 380,
+   "butter_g": 60,
+   "batter_g": 780,
+   "drift_pct": 33.3,
+   "verdict": "a quiet breakfast"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   1,
+   "belgian"
+  ],
+  "expect": {
+   "eggs": 1,
+   "flour_g": 93,
+   "liquid_g": 133,
+   "butter_g": 27,
+   "batter_g": 303,
+   "drift_pct": 33.3,
+   "verdict": "a quiet breakfast"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   4,
+   "belgian"
+  ],
+  "expect": {
+   "eggs": 3,
+   "flour_g": 280,
+   "liquid_g": 400,
+   "butter_g": 80,
+   "batter_g": 910,
+   "drift_pct": 0.0,
+   "verdict": "a family brunch"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   9,
+   "belgian"
+  ],
+  "expect": {
+   "eggs": 7,
+   "flour_g": 653,
+   "liquid_g": 933,
+   "butter_g": 187,
+   "batter_g": 2123,
+   "drift_pct": 3.7,
+   "verdict": "a family brunch"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   24,
+   "belgian"
+  ],
+  "expect": {
+   "eggs": 18,
+   "flour_g": 1680,
+   "liquid_g": 2400,
+   "butter_g": 480,
+   "batter_g": 5460,
+   "drift_pct": 0.0,
+   "verdict": "a full brunch shift"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   3,
+   "crepe"
+  ],
+  "expect": {
+   "eggs": 2,
+   "flour_g": 160,
+   "liquid_g": 400,
+   "butter_g": 32,
+   "batter_g": 692,
+   "drift_pct": 33.3,
+   "verdict": "a quiet breakfast"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   8,
+   "crepe"
+  ],
+  "expect": {
+   "eggs": 4,
+   "flour_g": 320,
+   "liquid_g": 800,
+   "butter_g": 64,
+   "batter_g": 1384,
+   "drift_pct": 0.0,
+   "verdict": "a family brunch"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   16,
+   "crepe"
+  ],
+  "expect": {
+   "eggs": 8,
+   "flour_g": 640,
+   "liquid_g": 1600,
+   "butter_g": 128,
+   "batter_g": 2768,
+   "drift_pct": 0.0,
+   "verdict": "a full brunch shift"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   2,
+   "crepe"
+  ],
+  "expect": {
+   "eggs": 1,
+   "flour_g": 80,
+   "liquid_g": 200,
+   "butter_g": 16,
+   "batter_g": 346,
+   "drift_pct": 0.0,
+   "verdict": "a quiet breakfast"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   5,
+   "pancake"
+  ],
+  "expect": {
+   "eggs": 3,
+   "flour_g": 360,
+   "liquid_g": 540,
+   "butter_g": 60,
+   "batter_g": 1110,
+   "drift_pct": 20.0,
+   "verdict": "a family brunch"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   10,
+   "pancake"
+  ],
+  "expect": {
+   "eggs": 5,
+   "flour_g": 600,
+   "liquid_g": 900,
+   "butter_g": 100,
+   "batter_g": 1850,
+   "drift_pct": 0.0,
+   "verdict": "a full brunch shift"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   7,
+   "pancake"
+  ],
+  "expect": {
+   "eggs": 4,
+   "flour_g": 480,
+   "liquid_g": 720,
+   "butter_g": 80,
+   "batter_g": 1480,
+   "drift_pct": 14.3,
+   "verdict": "a family brunch"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   1,
+   "pancake"
+  ],
+  "expect": {
+   "eggs": 1,
+   "flour_g": 120,
+   "liquid_g": 180,
+   "butter_g": 20,
+   "batter_g": 370,
+   "drift_pct": 100.0,
+   "verdict": "a quiet breakfast"
+  }
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   0,
+   "waffle"
+  ],
+  "error": "positive"
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   -3,
+   "waffle"
+  ],
+  "error": "positive"
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   2.5,
+   "waffle"
+  ],
+  "error": "whole people"
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   60,
+   "waffle"
+  ],
+  "error": "under 48"
+ },
+ {
+  "card": "batterPlan",
+  "args": [
+   4,
+   "galette"
+  ],
+  "error": "style is"
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   6,
+   "waffle",
+   1
+  ],
+  "expect": {
+   "pieces": 6,
+   "rounds": 6,
+   "wall_min": 24,
+   "verdict": "a brunch shift"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   6,
+   "waffle",
+   2
+  ],
+  "expect": {
+   "pieces": 6,
+   "rounds": 3,
+   "wall_min": 12,
+   "verdict": "a quick breakfast"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   12,
+   "waffle",
+   2
+  ],
+  "expect": {
+   "pieces": 12,
+   "rounds": 6,
+   "wall_min": 24,
+   "verdict": "a brunch shift"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   48,
+   "waffle",
+   3
+  ],
+  "expect": {
+   "pieces": 48,
+   "rounds": 16,
+   "wall_min": 64,
+   "verdict": "a marathon - borrow an iron"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   4,
+   "belgian",
+   1
+  ],
+  "expect": {
+   "pieces": 4,
+   "rounds": 4,
+   "wall_min": 20,
+   "verdict": "a brunch shift"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   10,
+   "belgian",
+   2
+  ],
+  "expect": {
+   "pieces": 10,
+   "rounds": 5,
+   "wall_min": 25,
+   "verdict": "a brunch shift"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   8,
+   "crepe",
+   1
+  ],
+  "expect": {
+   "pieces": 24,
+   "rounds": 24,
+   "wall_min": 48,
+   "verdict": "a marathon - borrow an iron"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   8,
+   "crepe",
+   2
+  ],
+  "expect": {
+   "pieces": 24,
+   "rounds": 12,
+   "wall_min": 24,
+   "verdict": "a brunch shift"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   24,
+   "crepe",
+   3
+  ],
+  "expect": {
+   "pieces": 72,
+   "rounds": 24,
+   "wall_min": 48,
+   "verdict": "a marathon - borrow an iron"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   5,
+   "pancake",
+   1
+  ],
+  "expect": {
+   "pieces": 15,
+   "rounds": 15,
+   "wall_min": 45,
+   "verdict": "a marathon - borrow an iron"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   10,
+   "pancake",
+   2
+  ],
+  "expect": {
+   "pieces": 30,
+   "rounds": 15,
+   "wall_min": 45,
+   "verdict": "a marathon - borrow an iron"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   16,
+   "pancake",
+   1
+  ],
+  "expect": {
+   "pieces": 48,
+   "rounds": 48,
+   "wall_min": 144,
+   "verdict": "a marathon - borrow an iron"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   3,
+   "waffle",
+   8
+  ],
+  "expect": {
+   "pieces": 3,
+   "rounds": 1,
+   "wall_min": 4,
+   "verdict": "a quick breakfast"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   20,
+   "belgian",
+   4
+  ],
+  "expect": {
+   "pieces": 20,
+   "rounds": 5,
+   "wall_min": 25,
+   "verdict": "a brunch shift"
+  }
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   0,
+   "waffle",
+   1
+  ],
+  "error": "positive"
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   4,
+   "waffle",
+   0
+  ],
+  "error": "positive"
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   4,
+   "waffle",
+   2.5
+  ],
+  "error": "whole irons"
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   4,
+   "waffle",
+   9
+  ],
+  "error": "under 8"
+ },
+ {
+  "card": "ironShift",
+  "args": [
+   4,
+   "galette",
+   1
+  ],
+  "error": "style is"
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "waffle",
+   5
+  ],
+  "expect": {
+   "rest_min": 10,
+   "hold_min": 30,
+   "verdict": "too soon - the batter is under-rested"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "waffle",
+   10
+  ],
+  "expect": {
+   "rest_min": 10,
+   "hold_min": 30,
+   "verdict": "mix now - the rest window fits"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "waffle",
+   40
+  ],
+  "expect": {
+   "rest_min": 10,
+   "hold_min": 30,
+   "verdict": "mix now - the rest window fits"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "waffle",
+   41
+  ],
+  "expect": {
+   "rest_min": 10,
+   "hold_min": 30,
+   "verdict": "too early - mix closer to serving"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "belgian",
+   45
+  ],
+  "expect": {
+   "rest_min": 30,
+   "hold_min": 20,
+   "verdict": "mix now - the rest window fits"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "belgian",
+   50
+  ],
+  "expect": {
+   "rest_min": 30,
+   "hold_min": 20,
+   "verdict": "mix now - the rest window fits"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "belgian",
+   51
+  ],
+  "expect": {
+   "rest_min": 30,
+   "hold_min": 20,
+   "verdict": "too early - mix closer to serving"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "crepe",
+   30
+  ],
+  "expect": {
+   "rest_min": 60,
+   "hold_min": 120,
+   "verdict": "too soon - the batter is under-rested"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "crepe",
+   180
+  ],
+  "expect": {
+   "rest_min": 60,
+   "hold_min": 120,
+   "verdict": "mix now - the rest window fits"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "crepe",
+   181
+  ],
+  "expect": {
+   "rest_min": 60,
+   "hold_min": 120,
+   "verdict": "too early - mix closer to serving"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "pancake",
+   0
+  ],
+  "expect": {
+   "rest_min": 5,
+   "hold_min": 45,
+   "verdict": "too soon - the batter is under-rested"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "pancake",
+   50
+  ],
+  "expect": {
+   "rest_min": 5,
+   "hold_min": 45,
+   "verdict": "mix now - the rest window fits"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "pancake",
+   51
+  ],
+  "expect": {
+   "rest_min": 5,
+   "hold_min": 45,
+   "verdict": "too early - mix closer to serving"
+  }
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "waffle",
+   -5
+  ],
+  "error": "zero or more"
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "waffle",
+   800
+  ],
+  "error": "under 12 hours"
+ },
+ {
+  "card": "restWindow",
+  "args": [
+   "galette",
+   30
+  ],
+  "error": "style is"
+ }
+]
