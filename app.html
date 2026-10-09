@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waffle math - batter for a crowd, iron shift, rest and hold</title>
+<style>
+  :root { --ink:#241c10; --accent:#b26a1e; --paper:#faf5ea; --card:#ffffff; --line:#e6d9bd; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Georgia, 'Times New Roman', serif; background:var(--paper); color:var(--ink); }
+  header { padding:2rem 1.25rem 1rem; max-width:960px; margin:0 auto; }
+  h1 { font-size:1.9rem; margin:0 0 .35rem; }
+  header p { margin:.25rem 0; color:#57482f; max-width:46rem; line-height:1.45; }
+  .norms { font-size:.9rem; color:#635331; margin-top:.6rem; }
+  main { max-width:960px; margin:0 auto; padding:0 1.25rem 3rem; display:grid; gap:1.25rem; }
+  @media (min-width:820px){ main { grid-template-columns:1fr 1fr 1fr; } }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1.1rem 1.1rem 1.25rem; }
+  .card h2 { font-size:1.15rem; margin:.1rem 0 .5rem; }
+  .card p.desc { font-size:.9rem; color:#635331; margin:.2rem 0 .8rem; line-height:1.4; }
+  label { display:block; font-size:.85rem; margin:.55rem 0 .15rem; color:#4a3d24; }
+  input, select { width:100%; padding:.45rem .5rem; font-size:1rem; border:1px solid var(--line); border-radius:6px; font-family:inherit; background:#fff; }
+  button { margin-top:.8rem; width:100%; padding:.55rem; font-size:1rem; font-family:inherit; background:var(--accent); color:#fff; border:0; border-radius:6px; cursor:pointer; }
+  button:hover { background:#8f5416; }
+  .out { margin-top:.9rem; font-size:.95rem; line-height:1.5; min-height:3.2rem; }
+  .out .big { font-size:1.35rem; font-weight:bold; }
+  .band { display:inline-block; margin-top:.35rem; padding:.15rem .55rem; border-radius:999px; background:#f3e3c8; color:#7a4d12; font-size:.82rem; }
+  .err { color:#a02323; }
+  footer { max-width:960px; margin:0 auto; padding:0 1.25rem 2.5rem; font-size:.85rem; color:#7a6a48; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Waffle math</h1>
+  <p>Recipes serve four; brunch serves whoever shows up. Scale the batter around whole eggs, see how long the iron is tied up, and know when to start mixing. Exact arithmetic, every borrowed number labeled.</p>
+  <p class="norms">Labeled norms: per serving - waffle 60 g flour / 95 g liquid / 0.5 egg / 15 g butter, 1 piece, 4 min; belgian 70/100/0.75/20, 1 piece, 5 min; crepe 40/100/0.5/8, 3 pieces, 2 min; pancake 60/90/0.5/10, 3 pieces, 3 min. Egg 50 g. Rest/hold: waffle 10/30, belgian 30/20, crepe 60/120, pancake 5/45 min.</p>
+</header>
+<main>
+  <section class="card" id="batter">
+    <h2>Batter for a crowd</h2>
+    <p class="desc">Servings and style become a shopping list. Eggs stay whole; everything else scales with them and the drift is shown.</p>
+    <label for="b-n">Servings</label>
+    <input id="b-n" type="number" step="1" min="1" value="8">
+    <label for="b-s">Style</label>
+    <select id="b-s">
+      <option value="waffle" selected>buttermilk waffle</option>
+      <option value="belgian">belgian</option>
+      <option value="crepe">crepe</option>
+      <option value="pancake">pancake</option>
+    </select>
+    <button id="b-go">Scale the batter</button>
+    <div class="out" id="b-out"></div>
+  </section>
+
+  <section class="card" id="iron">
+    <h2>Iron shift</h2>
+    <p class="desc">How many pieces, how many rounds and how long the iron is tied up.</p>
+    <label for="i-n">Servings</label>
+    <input id="i-n" type="number" step="1" min="1" value="8">
+    <label for="i-s">Style</label>
+    <select id="i-s">
+      <option value="waffle" selected>buttermilk waffle</option>
+      <option value="belgian">belgian</option>
+      <option value="crepe">crepe</option>
+      <option value="pancake">pancake</option>
+    </select>
+    <label for="i-k">Irons on the counter</label>
+    <input id="i-k" type="number" step="1" min="1" value="1">
+    <button id="i-go">Run the shift</button>
+    <div class="out" id="i-out"></div>
+  </section>
+
+  <section class="card" id="rest">
+    <h2>Rest and hold</h2>
+    <p class="desc">Minutes until serving become the verdict: under-rested, mix now or mix later.</p>
+    <label for="r-s">Style</label>
+    <select id="r-s">
+      <option value="waffle" selected>buttermilk waffle</option>
+      <option value="belgian">belgian</option>
+      <option value="crepe">crepe</option>
+      <option value="pancake">pancake</option>
+    </select>
+    <label for="r-m">Minutes until serving</label>
+    <input id="r-m" type="number" step="1" min="0" value="45">
+    <button id="r-go">Time the mix</button>
+    <div class="out" id="r-out"></div>
+  </section>
+</main>
+<footer>
+  Built by the app factory. <a href="index.html">About</a> &middot; <a href="https://github.com/iLanis-agent/wafflemath">Source</a>
+</footer>
+<script src="engine.js"></script>
+<script>
+(function () {
+  'use strict';
+  var M = window.WaffleMath;
+  function $(id){ return document.getElementById(id); }
+  function num(id){ return parseFloat($(id).value); }
+  function show(el, html){ el.classList.remove('err'); el.innerHTML = html; }
+  function fail(el, msg){ el.classList.add('err'); el.textContent = msg; }
+
+  $('b-go').addEventListener('click', function () {
+    var out = $('b-out');
+    try {
+      var r = M.batterPlan(num('b-n'), $('b-s').value);
+      show(out, '<span class="big">' + r.batter_g + ' g</span> batter' +
+        '<br>' + r.eggs + ' egg' + (r.eggs === 1 ? '' : 's') + ', ' + r.flour_g + ' g flour, ' +
+        r.liquid_g + ' g liquid, ' + r.butter_g + ' g butter' +
+        '<br>whole-egg drift ' + (r.drift_pct > 0 ? '+' : '') + r.drift_pct + '%' +
+        '<br><span class="band">' + r.verdict + '</span>');
+    } catch (e) { fail(out, e.message); }
+  });
+
+  $('i-go').addEventListener('click', function () {
+    var out = $('i-out');
+    try {
+      var r = M.ironShift(num('i-n'), $('i-s').value, num('i-k'));
+      show(out, '<span class="big">' + r.wall_min + ' min</span> on the iron' +
+        '<br>' + r.pieces + ' pieces in ' + r.rounds + ' round' + (r.rounds === 1 ? '' : 's') +
+        '<br><span class="band">' + r.verdict + '</span>');
+    } catch (e) { fail(out, e.message); }
+  });
+
+  $('r-go').addEventListener('click', function () {
+    var out = $('r-out');
+    try {
+      var r = M.restWindow($('r-s').value, num('r-m'));
+      show(out, 'rest <span class="big">' + r.rest_min + ' min</span>, holds ' + r.hold_min + ' min' +
+        '<br><span class="band">' + r.verdict + '</span>');
+    } catch (e) { fail(out, e.message); }
+  });
+})();
+</script>
+</body>
+</html>
